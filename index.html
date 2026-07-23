@@ -36,24 +36,46 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://www.arsosolutions.io/#business",
-  "name": "ARSO Solutions Lab",
-  "url": "https://www.arsosolutions.io/",
-  "logo": "https://www.arsosolutions.io/Assets/logo-full.svg",
-  "image": "https://www.arsosolutions.io/Assets/arso-social-preview.png",
-  "description": "ARSO builds practical systems, dashboards, automations, and AI solutions that help businesses reduce manual work and run cleaner operations.",
-  "areaServed": {
-    "@type": "Country",
-    "name": "United States"
-  },
-  "serviceType": [
-    "Business process automation",
-    "Operational dashboards and reporting",
-    "CRM and project operations systems",
-    "Inventory visibility systems",
-    "AI workflow solutions",
-    "Internal business tools"
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.arsosolutions.io/#organization",
+      "name": "ARSO Solutions Lab",
+      "url": "https://www.arsosolutions.io",
+      "logo": "https://www.arsosolutions.io/Assets/logo-full.svg",
+      "image": "https://www.arsosolutions.io/Assets/arso-social-preview.png",
+      "description": "ARSO Solutions Lab designs AI-powered software, workflow automation, and operational systems that simplify complex business processes.",
+      "foundingDate": "2026",
+      "founder": {
+        "@id": "https://www.arsosolutions.io/#matthew-smith",
+        "@type": "Person",
+        "name": "Matthew Smith"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "serviceType": [
+        "Business process automation",
+        "Operational dashboards and reporting",
+        "CRM and project operations systems",
+        "Inventory visibility systems",
+        "AI workflow solutions",
+        "Internal business tools"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.arsosolutions.io/#matthew-smith",
+      "name": "Matthew Smith",
+      "jobTitle": "Founder",
+      "worksFor": {
+        "@id": "https://www.arsosolutions.io/#organization",
+        "@type": "Organization",
+        "name": "ARSO Solutions Lab",
+        "url": "https://www.arsosolutions.io"
+      }
+    }
   ]
 }
 </script>
@@ -1462,7 +1484,7 @@
       </div>
 
       <div class="container footer-bottom">
-        <p>&copy; 2026 ARSO Solutions Lab</p>
+        <p class="footer-credit"><span>&copy; 2026 ARSO Solutions Lab</span><span class="footer-founder-credit"><span aria-hidden="true">&bull;</span> Founded by Matthew Smith</span></p>
         <nav aria-label="Footer legal navigation">
           <a href="privacy.html">Privacy</a>
           <a href="terms.html">Terms</a>
