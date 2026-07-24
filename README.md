@@ -1,26 +1,21 @@
-# ARSO
-ARSO Solutions Lab Website
+# ARSO Solutions Lab Website
 
-Modern business consulting website built for ARSO Solutions Lab.
+## Overview
+What is this project?
 
-Highlights
+## Features
+- Responsive design
+- SEO optimization
+- Structured data
+- Performance optimization
 
-✔ Responsive design
-
-✔ SEO optimized
-
-✔ JSON-LD structured data
-
-✔ Performance optimized
-
-✔ Accessible
-
-✔ Mobile-first
-
-Technologies
+## Technology
 HTML
 CSS
 JavaScript
 Vercel
 
+## Live Demo
 arsosolutions.io
+
+## Screenshots
