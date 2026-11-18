@@ -99,7 +99,14 @@
   <img src="/Assets/logo-compact1.svg" alt="AR" class="logo logo-compact" />
 </a>
 
-        <nav class="nav-links">
+        <button class="home-nav-toggle" type="button" aria-expanded="false" aria-controls="home-primary-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav-links" id="home-primary-nav" aria-label="Primary navigation">
           <a href="services.html">Services</a>
           <a href="projects.html">Projects</a>
           <a href="about.html">About</a>
@@ -113,15 +120,15 @@
   <div class="container">
     <div class="hero-showcase-grid">
       <div class="hero-left">
-        <p class="eyebrow">Systems &bull; Automation &bull; AI Solutions</p>
+        <p class="eyebrow">Practical Software &bull; Automation &bull; AI</p>
         <h1>
-          Fix messy processes.<br>
-          Build <span>smarter solutions.</span>
+          <span class="hero-headline-desktop">Fix messy processes.<br>Build <em>smarter solutions.</em></span>
+          <span class="hero-headline-mobile">See what <em>smarter work</em> looks like.</span>
         </h1>
 
         <p class="hero-copy">
-          ARSO Solutions Lab builds practical tools, dashboards, automations, and AI-assisted
-          systems that help businesses reduce manual work and run cleaner day-to-day operations.
+          <span class="hero-copy-desktop">ARSO Solutions Lab creates practical software, operational systems, automations, and AI-assisted tools that help businesses reduce manual work, improve visibility, and operate more efficiently.</span>
+          <span class="hero-copy-mobile">Practical software and automation that make everyday work clearer, faster, and easier to manage.</span>
         </p>
 
         <p class="hero-pricing hero-pricing-card">
@@ -130,146 +137,372 @@
         </p>
 
         <div class="hero-actions">
-          <a href="#contact" class="btn">Request a Free Demo</a>
-          <a href="#projects" class="btn btn-secondary">View Examples</a>
-        </div>
-
-        <div class="hero-service-strip" aria-label="Core services">
-          <div data-ga-event="crm_systems_clicked">
-            <i data-lucide="users-round"></i>
-            <span>CRM<br>Systems</span>
-          </div>
-          <div data-ga-event="dashboards_reporting_clicked">
-            <i data-lucide="bar-chart-3"></i>
-            <span>Dashboards<br>&amp; Reporting</span>
-          </div>
-          <div data-ga-event="automation_workflows_clicked">
-            <i data-lucide="settings-2"></i>
-            <span>Automation<br>Workflows</span>
-          </div>
-          <div data-ga-event="internal_tools_clicked">
-            <i data-lucide="code-2"></i>
-            <span>Internal<br>Tools</span>
-          </div>
+          <a href="#featured-systems-early" class="hero-explore-link" data-ga-event="cta_examples_clicked">
+            See more of what we build <span aria-hidden="true">&rarr;</span>
+          </a>
         </div>
       </div>
 
-      <div class="hero-visual-wrap" aria-hidden="true">
-        <div class="hero-product-board arso-app-shell">
-          <aside class="hero-product-sidebar arso-app-sidebar">
-           <div class="hero-logo-wrap">
-  <img src="/Assets/icon-light.svg" alt="" aria-hidden="true" class="hero-dashboard-logo" />
-</div>
-            <span class="hero-nav-pill active"><i data-lucide="home"></i> Dashboard</span>
-            <span><i data-lucide="bar-chart-3"></i> Leaderboard</span>
-            <span><i data-lucide="trophy"></i> Competitions</span>
-            <span><i data-lucide="handshake"></i> Deals</span>
-            <span><i data-lucide="line-chart"></i> Reports</span>
-            <span><i data-lucide="settings"></i> Settings</span>
-          </aside>
-
-          <div class="hero-product-main">
-            <div class="hero-board-topbar arso-app-topbar">
-              <div>
-                <span class="hero-dashboard-kicker"><i data-lucide="trophy"></i> Sales Leaderboard</span>
-                <h3>Q4 Sales Sprint</h3>
-              </div>
-              <span class="hero-dashboard-filter">This Month</span>
-            </div>
-
-            <div class="hero-performer-grid">
-              <article class="hero-performer-card arso-kpi-card is-winner">
-                <span class="hero-place gold">1</span>
-                <img src="/Assets/avatar-jose.jpg" alt="Jordan" class="hero-avatar">
-                <strong>Jordan Smith</strong>
-                <b>$128,430</b>
-                <small>135% of goal</small>
-                <div class="hero-goal-bar"><span style="width: 100%"></span></div>
-              </article>
-
-              <article class="hero-performer-card arso-kpi-card">
-                <span class="hero-place silver">2</span>
-                <img src="/Assets/avatar-taylor.jpg" alt="Taylor" class="hero-avatar">
-                <strong>Taylor Johnson</strong>
-                <b>$97,540</b>
-                <small>112% of goal</small>
-                <div class="hero-goal-bar"><span style="width: 82%"></span></div>
-              </article>
-
-              <article class="hero-performer-card arso-kpi-card">
-                <span class="hero-place bronze">3</span>
-                <img src="/Assets/avatar-sharon.jpg" alt="Casey" class="hero-avatar">
-                <strong>Casey Brown</strong>
-                <b>$84,230</b>
-                <small>98% of goal</small>
-                <div class="hero-goal-bar"><span style="width: 72%"></span></div>
-              </article>
-
-              <article class="hero-performer-card arso-kpi-card">
-                <span class="hero-place fourth">4</span>
-                <img src="/Assets/avatar-madi.jpg" alt="Morgan" class="hero-avatar">
-                <strong>Morgan Riley</strong>
-                <b>$72,890</b>
-                <small>85% of goal</small>
-                <div class="hero-goal-bar"><span style="width: 64%"></span></div>
-              </article>
-            </div>
-
-            <div class="hero-analytics-grid">
-              <article class="hero-analytics-card">
-                <span>Total Revenue</span>
-                <strong>$382,900 <em>&uarr; 18.6%</em></strong>
-                <svg viewBox="0 0 180 72" class="hero-line-chart" aria-hidden="true">
-                  <path d="M4 60 C20 26, 32 63, 46 42 S74 18, 88 43 S112 54, 126 30 S150 36, 176 8" />
-                </svg>
-              </article>
-
-              <article class="hero-analytics-card">
-                <span>Deals Closed</span>
-                <strong>46 <em>&uarr; 15.0%</em></strong>
-                <div class="hero-bar-chart" aria-hidden="true">
-                  <i style="height: 36%"></i><i style="height: 52%"></i><i style="height: 64%"></i><i style="height: 46%"></i><i style="height: 59%"></i><i style="height: 76%"></i><i style="height: 92%"></i>
-                </div>
-              </article>
-
-              <article class="hero-analytics-card hero-competitions-card">
-                <span>Active Competitions</span>
-                <strong>3</strong>
-                <div class="hero-competition-list">
-                  <p><i data-lucide="trophy"></i><span>Q4 Sales Challenge<small>Ends in 12 days</small></span></p>
-                  <p><i data-lucide="star"></i><span>Product Push<small>Ends in 19 days</small></span></p>
-                  <p><i data-lucide="badge-check"></i><span>Mega Month<small>Ends in 26 days</small></span></p>
-                </div>
-              </article>
-
-              <article class="hero-analytics-card hero-activity-card">
-                <span>Live Activity</span>
-                <small class="hero-activity-sub">Recent performance updates</small>
-                <div class="hero-activity-feed">
-                  <div class="hero-activity-track">
-                    <p><span></span> Morgan moved into the top 4</p>
-                    <p><span></span> Jordan closed a new enterprise deal</p>
-                    <p><span></span> Taylor hit 110% of monthly goal</p>
-                    <p><span></span> Casey added 4 qualified opportunities</p>
-                    <p><span></span> Morgan moved into the top 4</p>
-                    <p><span></span> Jordan closed a new enterprise deal</p>
-                    <p><span></span> Taylor hit 110% of monthly goal</p>
-                    <p><span></span> Casey added 4 qualified opportunities</p>
-                  </div>
-                </div>
-              </article>
-            </div>
-            
-          </div>
+      <figure class="hero-visual-wrap">
+        <div class="hero-image-frame">
+          <a
+            class="hero-image-link"
+            href="Assets/projects/i3/i3-home.png"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open the Innovate Three sales performance dashboard at full size in a new tab"
+          >
+            <img
+              src="Assets/projects/i3/i3-home.png"
+              alt="Innovate Three sales performance dashboard showing sales totals, leaderboard rankings, goal progress, pipeline, and recent activity"
+              width="1671"
+              height="941"
+              fetchpriority="high"
+            >
+            <span class="hero-image-enlarge">View full size</span>
+          </a>
         </div>
-        
-      </div>
+        <figcaption>Sales performance visibility designed around the way a team works.</figcaption>
+      </figure>
         
     </div>
   </div>
 
 </section>
-<section id="featured-systems-early" class="section examples-section featured-systems-early" aria-label="Featured operational systems">
+<section id="featured-systems-early" class="section business-solutions" aria-labelledby="business-solutions-title">
+  <div class="container">
+    <div class="business-solutions-intro">
+      <span class="eyebrow">Business Solutions in Action</span>
+      <h2 id="business-solutions-title">Different businesses. Different challenges. Smarter systems.</h2>
+      <p>Explore examples of how practical software can bring clarity to everyday operations.</p>
+    </div>
+
+    <div class="business-showcase">
+      <div class="business-showcase-picker-head" id="business-showcase-picker-help">
+        <strong>Explore four business examples</strong>
+        <span>Select a business to update the interactive preview.</span>
+      </div>
+      <div class="business-showcase-tabs" role="tablist" aria-label="Business software examples" aria-describedby="business-showcase-picker-help">
+        <button id="business-tab-i3" type="button" role="tab" aria-selected="true" aria-controls="business-showcase-panel" tabindex="0" data-business="i3">
+          <span class="business-tab-thumbnail"><img src="Assets/projects/i3/i3-home.png" alt="" width="1671" height="941"></span>
+          <span class="business-tab-label"><strong>Innovate Three</strong><span>Sales Leaderboard</span></span>
+        </button>
+        <button id="business-tab-buyers" type="button" role="tab" aria-selected="false" aria-controls="business-showcase-panel" tabindex="-1" data-business="buyers">
+          <span class="business-tab-thumbnail"><img src="Assets/projects/buyersrecourse/buyers-recourse-home.png" alt="" width="1672" height="941"></span>
+          <span class="business-tab-label"><strong>Buyers Recourse</strong><span>Retail Operations</span></span>
+        </button>
+        <button id="business-tab-loft" type="button" role="tab" aria-selected="false" aria-controls="business-showcase-panel" tabindex="-1" data-business="loft">
+          <span class="business-tab-thumbnail"><img src="Assets/projects/loft/loft-home.png" alt="" width="1671" height="941"></span>
+          <span class="business-tab-label"><strong>The Loft</strong><span>Warehouse Inventory</span></span>
+        </button>
+        <button id="business-tab-bsb" type="button" role="tab" aria-selected="false" aria-controls="business-showcase-panel" tabindex="-1" data-business="bsb">
+          <span class="business-tab-thumbnail"><img src="Assets/projects/bsb/bsb-home.png" alt="" width="1670" height="942"></span>
+          <span class="business-tab-label"><strong>Blue Springs Bowl</strong><span>Employee Training &amp; Onboarding</span></span>
+        </button>
+      </div>
+
+      <article id="business-showcase-panel" class="business-showcase-panel" role="tabpanel" aria-labelledby="business-tab-i3" tabindex="0">
+        <figure class="business-showcase-preview">
+          <img
+            id="business-showcase-image"
+            src="Assets/projects/i3/i3-home.png"
+            alt="Innovate Three sales performance dashboard showing rankings, goals, pipeline, and team activity"
+            width="1671"
+            height="941"
+          >
+          <button id="business-showcase-expand" class="business-showcase-expand" type="button" aria-label="Enlarge the Innovate Three sales leaderboard example">
+            <i data-lucide="maximize-2" aria-hidden="true"></i><span>Expand</span>
+          </button>
+        </figure>
+
+        <div class="business-showcase-copy">
+          <div class="business-showcase-identity">
+            <img id="business-showcase-logo" src="Assets/projects/i3/I3-logo.png" alt="Innovate Three" width="1983" height="793">
+            <span>Example solution</span>
+          </div>
+          <p class="business-showcase-kicker" id="business-showcase-kicker">Sales Leaderboard</p>
+          <h3 id="business-showcase-name">Innovate Three</h3>
+          <p id="business-showcase-description">Turn sales performance into a live, shared experience. A real-time leaderboard keeps teams informed of rankings, goals, and achievements, while automatic scrolling makes it easy to display performance across office TVs and shared screens.</p>
+          <ul id="business-showcase-capabilities" class="business-showcase-capabilities" aria-label="Innovate Three example capabilities">
+            <li>Real-time leaderboard</li>
+            <li>Automatic scrolling display</li>
+            <li>Live sales rankings</li>
+            <li>Goal tracking</li>
+            <li>TV-ready team dashboards</li>
+          </ul>
+          <p class="business-showcase-note">Designed around practical workflows. Illustrative example, not a customer case study.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<dialog id="business-showcase-dialog" class="business-showcase-dialog" aria-labelledby="business-showcase-dialog-title">
+  <div class="business-showcase-dialog-card">
+    <div class="business-showcase-dialog-head">
+      <h2 id="business-showcase-dialog-title">Innovate Three — Sales Leaderboard</h2>
+      <button id="business-showcase-dialog-close" type="button" aria-label="Close enlarged software preview">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <img id="business-showcase-dialog-image" src="Assets/projects/i3/i3-home.png" alt="Innovate Three sales performance dashboard shown at a larger size" width="1671" height="941">
+  </div>
+</dialog>
+
+<section id="occuboard" class="section product-showcase product-showcase-occuboard" aria-labelledby="occuboard-title">
+  <div class="container product-showcase-shell">
+    <div class="product-showcase-copy">
+      <p class="product-showcase-eyebrow">Featured Product</p>
+      <img class="product-showcase-logo" src="Assets/projects/occuboard/occuboard-logo-dark.svg" alt="OccuBoard" width="1262" height="512">
+      <h2 id="occuboard-title">A clearer path from job posting to interview.</h2>
+      <p class="product-showcase-description">
+        OccuBoard helps job seekers understand where they fit, strengthen how they present their experience,
+        and manage each opportunity from first analysis through interview preparation.
+      </p>
+      <ul class="product-showcase-capabilities" aria-label="OccuBoard capabilities">
+        <li><i data-lucide="scan-search" aria-hidden="true"></i><span>Job-fit analysis</span></li>
+        <li><i data-lucide="file-pen-line" aria-hidden="true"></i><span>Resume tailoring</span></li>
+        <li><i data-lucide="user-round-search" aria-hidden="true"></i><span>Recruiter perspective</span></li>
+        <li><i data-lucide="messages-square" aria-hidden="true"></i><span>Interview preparation</span></li>
+        <li><i data-lucide="list-checks" aria-hidden="true"></i><span>Application tracking</span></li>
+      </ul>
+      <a class="product-showcase-link" href="https://occuboard.io" target="_blank" rel="noopener noreferrer">
+        <span>Explore OccuBoard</span><i data-lucide="arrow-up-right" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <div class="product-showcase-visual">
+      <div class="product-showcase-glow" aria-hidden="true"></div>
+      <button class="product-showcase-screenshot" id="occuboard-expand" type="button" aria-label="Enlarge the OccuBoard application screenshot">
+        <img src="Assets/projects/occuboard/occuboard-analysis.png" alt="OccuBoard application workspace showing job-fit analysis, recruiter confidence, resume tailoring, interview preparation, and application tracking" width="1261" height="943">
+        <span class="product-showcase-expand"><i data-lucide="maximize-2" aria-hidden="true"></i>Expand</span>
+      </button>
+      <p>Actual OccuBoard application</p>
+    </div>
+  </div>
+</section>
+
+<dialog id="occuboard-dialog" class="business-showcase-dialog product-showcase-dialog" aria-labelledby="occuboard-dialog-title">
+  <div class="business-showcase-dialog-card">
+    <div class="business-showcase-dialog-head">
+      <h2 id="occuboard-dialog-title">OccuBoard application</h2>
+      <button id="occuboard-dialog-close" type="button" aria-label="Close enlarged OccuBoard screenshot">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <img src="Assets/projects/occuboard/occuboard-analysis.png" alt="OccuBoard application workspace showing job-fit analysis, recruiter confidence, resume tailoring, interview preparation, and application tracking at a larger size" width="1261" height="943">
+  </div>
+</dialog>
+
+<section id="systems-we-build" class="section homepage-systems-section" aria-labelledby="services-overview-title">
+  <div class="container">
+    <div class="section-heading services-overview-heading">
+      <div>
+        <span class="eyebrow">Services &amp; Capabilities</span>
+        <h2 id="services-overview-title">Practical support for the way your team works.</h2>
+      </div>
+      <p>
+        From clearer operations to useful automation, ARSO shapes focused systems around real day-to-day work.
+      </p>
+    </div>
+
+    <div class="homepage-system-preview-grid homepage-capability-grid" aria-label="ARSO services and capabilities">
+      <article>
+        <div class="homepage-capability-icon"><i data-lucide="code-2"></i></div>
+        <h3>Custom Software &amp; Product Development</h3>
+        <p>Turn an idea into working software. From early concepts and prototypes to customer-facing applications and products built to launch, sell, and grow.</p>
+      </article>
+
+      <article>
+        <div class="homepage-capability-icon"><i data-lucide="layout-dashboard"></i></div>
+        <h3>CRM, Operations &amp; Reporting</h3>
+        <p>Shared views for pipeline, tasks, ownership, leaderboards, KPIs, and follow-through.</p>
+      </article>
+
+      <article>
+        <div class="homepage-capability-icon"><i data-lucide="boxes"></i></div>
+        <h3>Inventory Operations</h3>
+        <p>Practical visibility into stock levels, locations, vendors, and reorder needs.</p>
+      </article>
+
+      <article>
+        <div class="homepage-capability-icon"><i data-lucide="sparkles"></i></div>
+        <h3>AI Workflow Assistants</h3>
+        <p>Useful support for summaries, follow-ups, routing, reports, and reminders.</p>
+      </article>
+
+      <article>
+        <div class="homepage-capability-icon"><i data-lucide="graduation-cap"></i></div>
+        <h3>Training &amp; Readiness</h3>
+        <p>Role-based onboarding, SOP tracking, checklists, and readiness views.</p>
+      </article>
+
+      <article>
+        <div class="homepage-capability-icon"><i data-lucide="route"></i></div>
+        <h3>Map My Process</h3>
+        <p>A practical review of where work slows down, breaks, or depends on memory.</p>
+      </article>
+    </div>
+
+    <a class="services-overview-link" href="services.html">Explore all services <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+  </div>
+</section>
+
+<section id="recap" class="section product-showcase product-showcase-recap" aria-labelledby="recap-title">
+  <div class="container product-showcase-shell recap-showcase-shell">
+    <div class="product-showcase-visual recap-showcase-visual">
+      <div class="product-showcase-glow" aria-hidden="true"></div>
+      <button class="product-showcase-screenshot" id="recap-expand" type="button" aria-label="Enlarge the RECAP scoring workspace screenshot">
+        <img id="recap-showcase-image" src="Assets/projects/recap/recap-scoring.png" alt="RECAP tournament scoring workspace showing score entry, saved totals, and a live leaderboard" width="1273" height="991">
+        <span class="product-showcase-expand"><i data-lucide="maximize-2" aria-hidden="true"></i>Expand</span>
+      </button>
+      <div class="recap-view-switcher" role="group" aria-label="Choose a RECAP application view">
+        <button class="is-active" type="button" aria-pressed="true" data-recap-view="scoring">
+          <img src="Assets/projects/recap/recap-scoring.png" alt="" width="1273" height="991">
+          <span>Scoring workspace</span>
+        </button>
+        <button type="button" aria-pressed="false" data-recap-view="standings">
+          <img src="Assets/projects/recap/recap-scrolling.png" alt="" width="1918" height="1123">
+          <span>Live standings</span>
+        </button>
+      </div>
+      <p>Actual RECAP application</p>
+    </div>
+
+    <div class="product-showcase-copy recap-showcase-copy">
+      <p class="product-showcase-eyebrow">Tournament Management</p>
+      <img class="product-showcase-logo recap-showcase-logo" src="Assets/projects/recap/ChatGPT Image Nov 14, 2026, 01_37_24 AM.png" alt="RECAP Bowling Tournament Software" width="1341" height="443">
+      <h2 id="recap-title">Bowling tournaments, without the operational chaos.</h2>
+      <p class="product-showcase-description">
+        RECAP brings tournament registration, bowler management, lane assignments, scoring, and live standings into one organized workspace. Built to help tournament directors spend less time managing spreadsheets and more time running great events.
+      </p>
+      <ul class="product-showcase-capabilities" aria-label="RECAP capabilities">
+        <li><i data-lucide="clipboard-list" aria-hidden="true"></i><span>Tournament setup &amp; registration</span></li>
+        <li><i data-lucide="users-round" aria-hidden="true"></i><span>Bowler and team management</span></li>
+        <li><i data-lucide="rows-3" aria-hidden="true"></i><span>Lane assignments</span></li>
+        <li><i data-lucide="square-pen" aria-hidden="true"></i><span>Score tracking</span></li>
+        <li><i data-lucide="trophy" aria-hidden="true"></i><span>Live standings &amp; scoreboards</span></li>
+      </ul>
+      <a class="product-showcase-link" href="https://app.recapbowling.com" target="_blank" rel="noopener noreferrer">
+        <span>Explore RECAP</span><i data-lucide="arrow-up-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<dialog id="recap-dialog" class="business-showcase-dialog product-showcase-dialog" aria-labelledby="recap-dialog-title">
+  <div class="business-showcase-dialog-card">
+    <div class="business-showcase-dialog-head">
+      <h2 id="recap-dialog-title">RECAP scoring workspace</h2>
+      <button id="recap-dialog-close" type="button" aria-label="Close enlarged RECAP screenshot">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <img id="recap-dialog-image" src="Assets/projects/recap/recap-scoring.png" alt="RECAP tournament scoring workspace showing score entry, saved totals, and a live leaderboard at a larger size" width="1273" height="991">
+  </div>
+</dialog>
+
+<section id="how-we-work" class="section section-alt" aria-labelledby="process-title">
+  <div class="container">
+
+    <div class="section-heading">
+      <span class="eyebrow">From Idea to Implementation</span>
+      <h2 id="process-title">A clear path from first conversation to ongoing improvement.</h2>
+      <p>We work alongside your team, keeping each step practical, visible, and grounded in how the work actually happens.</p>
+    </div>
+
+    <div class="flow-chart">
+
+      <article class="flow-step">
+        <span class="flow-number">01</span>
+        <h3>Discover</h3>
+        <p>Understand the people, process, friction, and priorities.</p>
+      </article>
+
+      <article class="flow-step">
+        <span class="flow-number">02</span>
+        <h3>Design</h3>
+        <p>Map a focused solution around the way your team works.</p>
+      </article>
+
+      <article class="flow-step">
+        <span class="flow-number">03</span>
+        <h3>Build</h3>
+        <p>Create and test the system in practical, usable pieces.</p>
+      </article>
+
+      <article class="flow-step">
+        <span class="flow-number">04</span>
+        <h3>Launch</h3>
+        <p>Put the solution into real workflows with clear support.</p>
+      </article>
+
+      <article class="flow-step">
+        <span class="flow-number">05</span>
+        <h3>Improve</h3>
+        <p>Use feedback and day-to-day experience to refine it.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="ph-scan" class="section product-showcase product-showcase-phscan" aria-labelledby="phscan-title">
+  <div class="container product-showcase-shell phscan-showcase-shell">
+    <div class="product-showcase-copy phscan-showcase-copy">
+      <p class="product-showcase-eyebrow">Document Intelligence</p>
+      <img class="product-showcase-logo phscan-showcase-logo" src="Assets/projects/phscan/phscan-logo.png" alt="PH Scan" width="1774" height="887">
+      <h2 id="phscan-title">From document clutter to organized information.</h2>
+      <p class="product-showcase-description">
+        PH Scan is being developed to simplify how businesses process and organize documents. Its goal is to help users extract useful information, improve file naming, and bring structure to disorganized digital records.
+      </p>
+      <ul class="product-showcase-capabilities" aria-label="Planned PH Scan capabilities">
+        <li><i data-lucide="scan-text" aria-hidden="true"></i><span>Document reading and extraction</span></li>
+        <li><i data-lucide="folder-tree" aria-hidden="true"></i><span>Intelligent file organization</span></li>
+        <li><i data-lucide="file-pen-line" aria-hidden="true"></i><span>File naming assistance</span></li>
+        <li><i data-lucide="folder-cog" aria-hidden="true"></i><span>Virtual file cleanup</span></li>
+        <li><i data-lucide="file-search" aria-hidden="true"></i><span>Searchable document information</span></li>
+      </ul>
+      <a class="product-showcase-link" href="projects.html">
+        <span>Explore PH Scan</span><i data-lucide="arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <div class="product-showcase-visual phscan-showcase-visual">
+      <div class="product-showcase-glow" aria-hidden="true"></div>
+      <button class="product-showcase-screenshot" id="phscan-expand" type="button" aria-label="Enlarge the PH Scan application screenshot">
+        <img src="Assets/projects/phscan/phscan.png" alt="PH Scan document intelligence workspace showing document scanning, extracted information, suggested file naming, and virtual file cleanup" width="1672" height="941">
+        <span class="product-showcase-expand"><i data-lucide="maximize-2" aria-hidden="true"></i>Expand</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<dialog id="phscan-dialog" class="business-showcase-dialog product-showcase-dialog" aria-labelledby="phscan-dialog-title">
+  <div class="business-showcase-dialog-card">
+    <div class="business-showcase-dialog-head">
+      <h2 id="phscan-dialog-title">PH Scan application</h2>
+      <button id="phscan-dialog-close" type="button" aria-label="Close enlarged PH Scan screenshot">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <img src="Assets/projects/phscan/phscan.png" alt="PH Scan document intelligence workspace showing document scanning, extracted information, suggested file naming, and virtual file cleanup at a larger size" width="1672" height="941">
+  </div>
+</dialog>
+
+<section id="homepage-process-close" class="section homepage-closing-section" aria-labelledby="closing-invitation-title">
+  <div class="container homepage-closing-card">
+    <div>
+      <span class="eyebrow">Build With ARSO</span>
+      <h2 id="closing-invitation-title">Let&rsquo;s build something useful.</h2>
+      <p>Whether you're creating a product from scratch or improving the systems behind your business, ARSO can help turn the idea into something real.</p>
+    </div>
+    <div class="homepage-closing-actions">
+      <a href="#contact-form" class="btn contact-form-trigger">Start a Conversation</a>
+    </div>
+  </div>
+</section>
+
+<section id="legacy-featured-systems" class="section examples-section featured-systems-early legacy-showcase-retired" aria-label="Retired featured operational systems" hidden>
   <div class="container">
     <div class="section-heading left">
       <span class="eyebrow">Featured Systems</span>
@@ -520,101 +753,9 @@
     </div>
   </div>
 </section>
-<section id="systems-we-build" class="section homepage-systems-section">
-  <div class="container">
-    <div class="section-heading left">
-      <span class="eyebrow">Systems We Build</span>
-      <h2>Operational systems we build</h2>
-      <p>
-        Practical systems designed around real workflows, visibility, and day-to-day operations.
-      </p>
-    </div>
 
-    <div class="homepage-system-preview-grid homepage-capability-grid" aria-label="Systems ARSO builds">
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="kanban"></i></div>
-        <span>CRM &amp; project operations</span>
-        <a href="crm-operations.html">View details</a>
-      </article>
 
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="boxes"></i></div>
-        <span>Inventory visibility</span>
-        <a href="inventory-visibility.html">View details</a>
-      </article>
-
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="bar-chart-3"></i></div>
-        <span>Reporting dashboards</span>
-        <a href="services.html#service-dashboards">View details</a>
-      </article>
-
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="check-check"></i></div>
-        <span>Approval workflows</span>
-        <a href="ai-workflow-assistant.html">View details</a>
-      </article>
-
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="sparkles"></i></div>
-        <span>AI workflow support</span>
-        <a href="ai-workflow-assistant.html">View details</a>
-      </article>
-
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="wrench"></i></div>
-        <span>Internal operational tools</span>
-        <a href="services.html#service-crm">View details</a>
-      </article>
-
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="graduation-cap"></i></div>
-        <span>Team readiness systems</span>
-        <a href="services.html#service-training">View details</a>
-      </article>
-
-      <article>
-        <div class="homepage-capability-icon"><i data-lucide="globe"></i></div>
-        <span>Customer intake &amp; web presence</span>
-        <a href="services.html#service-web-presence">View details</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="common-problems-home" class="section homepage-problems-section">
-  <div class="container">
-    <div class="section-heading left">
-      <span class="eyebrow">Common Problems</span>
-      <h2>Small operational problems become expensive when they keep repeating.</h2>
-      <p>
-        Most operational chaos starts as small recurring friction points like the ones below.
-      </p>
-    </div>
-
-    <div class="homepage-problem-groups" aria-label="Common operational problems">
-      <div class="homepage-problem-group">
-        <strong>Visibility &amp; Tracking</strong>
-        <div class="homepage-problem-chips">
-          <span>Too many spreadsheets</span>
-          <span>Status updates live in emails/texts</span>
-          <span>Reporting takes too much time</span>
-        </div>
-      </div>
-
-      <div class="homepage-problem-group">
-        <strong>Operational Friction</strong>
-        <div class="homepage-problem-chips">
-          <span>Managers chase follow-ups manually</span>
-          <span>Inventory questions take too long</span>
-          <span>Processes depend on memory</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="projects" class="section examples-section">
+<section id="projects" class="section examples-section legacy-showcase-retired" hidden aria-hidden="true">
   <div class="container">
     <div class="section-heading">
       <span class="eyebrow">More Systems</span>
@@ -1191,98 +1332,43 @@
     </div>
   </section>     
 
-<section id="how-we-work" class="section section-alt">
-  <div class="container">
 
-    <div class="section-heading">
-      <span class="eyebrow">How We Work</span>
-      <h2>From problem to practical system.</h2>
-      <p>We take messy workflows and turn them into clear, usable solutions using a simple, structured process.</p>
-    </div>
-
-    <div class="flow-chart">
-
-      <article class="flow-step">
-        <span class="flow-number">01</span>
-        <h3>Find the Friction</h3>
-        <p>We look at what's slowing things down, where time is being wasted, and where systems break.</p>
-      </article>
-
-      <article class="flow-step">
-        <span class="flow-number">02</span>
-        <h3>Design the Fix</h3>
-        <p>We map a simple, practical solution based on how your business actually operates.</p>
-      </article>
-
-      <article class="flow-step">
-        <span class="flow-number">03</span>
-        <h3>Build the System</h3>
-        <p>We create lightweight workflows, dashboards, automations, and operational tools your team can actually use.</p>
-      </article>
-
-      <article class="flow-step">
-        <span class="flow-number">04</span>
-        <h3>Launch & Improve</h3>
-        <p>We launch usable systems, gather feedback, and refine the tools around real day-to-day operations.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="homepage-process-close" class="section homepage-closing-section">
-  <div class="container homepage-closing-card">
-    <div>
-      <span class="eyebrow">Process First</span>
-      <h2>Good systems start with understanding the work first.</h2>
-      <p>
-        Every business runs differently. ARSO builds practical systems around how your team already works.
-        We focus on understanding where work slows down, where visibility breaks,
-        and where manual processes create unnecessary friction before recommending systems or automation.
-      </p>
-    </div>
-    <div class="homepage-closing-actions">
-      <a href="#contact-form" class="btn contact-form-trigger">Map My Process</a>
-      <a href="#contact-form" class="homepage-closing-link contact-form-trigger">Talk Through a Workflow</a>
-    </div>
-  </div>
-</section>
 
      <section id="contact" class="section contact-section">
   <div class="container">
     <div class="contact-box">
 
       <div class="contact-copy">
-        <span class="eyebrow">Work With ARSO</span>
-        <h2>Your team shouldn’t need workarounds to stay organized.</h2>
+        <span class="eyebrow">Start a Conversation</span>
+        <h2>Bring us the idea, the bottleneck, or both.</h2>
 
         <p>
-          Most teams reach out because something in the day-to-day process feels harder than it should.
-          Tell us where work gets messy, and we’ll help map a practical process around how your team actually operates.
+          Whether you&rsquo;re shaping a new software product or improving how work gets done, tell us what you&rsquo;re trying to build or change. We&rsquo;ll help you find a practical next step.
         </p>
 
         <ul class="contact-reassurance">
-          <li>No bloated software pitch</li>
-          <li>Built around your actual process</li>
-          <li>Practical systems your team can use</li>
+          <li>Ideas explored without unnecessary complexity</li>
+          <li>Products and systems shaped around real needs</li>
+          <li>A practical path from conversation to working software</li>
         </ul>
 
         <div class="contact-actions">
-          <a href="#contact-form" class="btn contact-form-trigger contact-primary-cta">Map My Process<i data-lucide="arrow-big-right"></i></a>
-          <a href="#contact-form" class="btn btn-secondary contact-form-trigger">Talk Through a Process</a>
+          <a href="#contact-form" class="btn contact-form-trigger contact-primary-cta">Start a Conversation<i data-lucide="arrow-big-right"></i></a>
+          <a href="services.html" class="btn btn-secondary">Explore Services</a>
         </div>
 
         <p class="contact-note">
-          No pressure. Just a practical conversation about what’s slowing your team down.
+          No pressure. Just a practical conversation about the idea or challenge in front of you.
         </p>
         <p class="contact-microcopy">
-          Most operational problems don’t need more software. They need clearer structure.
+          Start with what you know. We can help make the next step clearer.
         </p>
       </div>
 
       <div class="contact-form-panel">
 <div class="contact-form-intro">
-  <h3>Tell us what’s slowing your team down.</h3>
-  <p>Tell us what part of the day-to-day process keeps creating extra work, confusion, delays, repeated follow-up or if you just want to talk about it.</p>
+  <h3>What would you like to make real?</h3>
+  <p>Share a product idea, an operational challenge, or a process you want to improve. A few useful details are enough to begin.</p>
 </div>
 <form 
   action="https://formspree.io/f/xbdqypze" 
@@ -1317,6 +1403,7 @@
   <div class="form-field floating-field form-field-full">
     <select id="category" name="category" required>
       <option value="" disabled selected></option>
+      <option>Custom Software / Product Development</option>
       <option>CRM / Client Tracking</option>
       <option>Inventory / Operations</option>
       <option>Automation / Repetitive Tasks</option>
@@ -1326,14 +1413,14 @@
       <option>Job Openings / Contract Work</option>
       <option>Something Else / Not sure yet</option>
     </select>
-    <label for="category">What would you like help improving?</label>
+    <label for="category">What would you like help building or improving?</label>
   </div>
 
   <div class="form-field floating-field form-field-full">
     <textarea id="message" name="message" rows="6" placeholder=" " required></textarea>
-    <label for="message">What part of the day tends to create extra work or confusion?</label>
+    <label for="message">Tell us about the idea or challenge.</label>
     <small class="field-help">
-      A few details are enough: where work slows down, what is being done manually, or anything you'd like to clean up.
+      A few details are enough: what you want to create, where work slows down, or what you would like to change.
     </small>
   </div>
 
@@ -1452,12 +1539,12 @@
         <nav class="footer-nav" aria-label="Footer services navigation">
           <h3>Services</h3>
           <a href="crm-operations.html">CRM Systems</a>
-          <a href="services.html#service-dashboards">Operations Dashboards</a>
+          <a href="services.html#dashboards-reporting">Operations Dashboards</a>
           <a href="inventory-visibility.html">Inventory Systems</a>
-          <a href="services.html#service-ai">Process Automation</a>
+          <a href="services.html#ai-automation">Process Automation</a>
           <a href="ai-workflow-assistant.html">AI Tools</a>
-          <a href="services.html#service-training">Team Enablement</a>
-          <a href="services.html#service-web-presence">Web Presence &amp; Intake</a>
+          <a href="services.html#training-enablement">Team Enablement</a>
+          <a href="services.html#custom-software">Web Presence &amp; Intake</a>
         </nav>
 
         <nav class="footer-nav" aria-label="Footer company navigation">
@@ -1489,7 +1576,40 @@
 
     <script src="script.js"></script>
 	<script>
-  lucide.createIcons();
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector(".home-nav-toggle");
+    const nav = document.getElementById("home-primary-nav");
+    if (!toggle || !nav) return;
+
+    const closeMenu = (restoreFocus = false) => {
+      nav.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+      if (restoreFocus) toggle.focus();
+    };
+
+    toggle.addEventListener("click", () => {
+      const shouldOpen = toggle.getAttribute("aria-expanded") !== "true";
+      nav.classList.toggle("is-open", shouldOpen);
+      toggle.setAttribute("aria-expanded", String(shouldOpen));
+    });
+
+    nav.addEventListener("click", (event) => {
+      if (event.target.closest("a")) closeMenu();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && nav.classList.contains("is-open")) {
+        closeMenu(true);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 640) closeMenu();
+    });
+  });
+</script>
+	<script>
+  window.lucide?.createIcons();
 </script>
 <!--Assitant Widget-->
 <!--script>
@@ -1545,7 +1665,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
-  lucide.createIcons();
+  window.lucide?.createIcons();
 
   const toggle = document.getElementById("assistantToggle");
   const widget = document.getElementById("assistantWidget");
@@ -1586,7 +1706,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ? "\u00d7"
       : '<i data-lucide="info"></i>';
 
-    lucide.createIcons();
+    window.lucide?.createIcons();
   });
 
   document.querySelectorAll(".assistant-options button").forEach(btn => {
@@ -1629,7 +1749,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     widget.classList.remove("open");
     toggle.innerHTML = '<i data-lucide="info"></i>';
-    lucide.createIcons();
+    window.lucide?.createIcons();
   });
 
   setTimeout(() => {
@@ -1677,7 +1797,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const track = document.querySelector('.mockup-list-track');
-    if (!track) return;
+    if (!track || track.closest('[hidden]')) return;
 
     function getPrimaryRows() {
       const rows = Array.from(track.querySelectorAll('.mockup-row'));
@@ -1989,12 +2109,13 @@ ${message}`;
 document.addEventListener("DOMContentLoaded", function () {
 
   // Render icons AFTER button exists
-  lucide.createIcons();
+  window.lucide?.createIcons();
 
   const backToTop = document.getElementById("backToTop");
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
+    const revealPoint = window.innerWidth <= 640 ? 600 : 200;
+    if (window.scrollY > revealPoint) {
       backToTop.classList.add("show");
     } else {
       backToTop.classList.remove("show");
@@ -2033,27 +2154,8 @@ updateHeaderLogo();
   
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const scores = document.querySelectorAll(".hero-performer-card b");
-  if (!scores.length) return;
-
-  setInterval(() => {
-    const score = scores[Math.floor(Math.random() * scores.length)];
-    const current = Number(score.textContent.replace(/[$,]/g, ""));
-    if (!Number.isFinite(current)) return;
-
-    const next = current + Math.floor(Math.random() * 1200 + 300);
-    score.textContent = "$" + next.toLocaleString();
-    score.classList.add("score-pop");
-
-    setTimeout(() => score.classList.remove("score-pop"), 500);
-  }, 3500);
-});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
   const aiRoot = document.querySelector(".ai-workflow-mockup");
-  if (!aiRoot) return;
+  if (!aiRoot || aiRoot.closest('[hidden]')) return;
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reducedMotion) return;
@@ -2165,7 +2267,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const board = document.querySelector(".leaderboard-system-mockup");
-  if (!board) return;
+  if (!board || board.closest('[hidden]')) return;
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reducedMotion) return;
@@ -2345,6 +2447,265 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<script>
+(() => {
+  const showcase = document.querySelector(".business-showcase");
+  if (!showcase) return;
+
+  const solutions = {
+    i3: {
+      name: "Innovate Three",
+      kicker: "Sales Leaderboard",
+      description: "Turn sales performance into a live, shared experience. A real-time leaderboard keeps teams informed of rankings, goals, and achievements, while automatic scrolling makes it easy to display performance across office TVs and shared screens.",
+      image: "Assets/projects/i3/i3-home.png",
+      imageWidth: 1671,
+      imageHeight: 941,
+      imageAlt: "Innovate Three sales performance dashboard showing rankings, goals, pipeline, and team activity",
+      logo: "Assets/projects/i3/I3-logo.png",
+      logoWidth: 1983,
+      logoHeight: 793,
+      logoAlt: "Innovate Three",
+      capabilities: ["Real-time leaderboard", "Automatic scrolling display", "Live sales rankings", "Goal tracking", "TV-ready team dashboards"]
+    },
+    buyers: {
+      name: "Buyers Recourse",
+      kicker: "Retail Operations",
+      description: "Bring sales, inventory, orders, and daily priorities into one practical operating view.",
+      image: "Assets/projects/buyersrecourse/buyers-recourse-home.png",
+      imageWidth: 1672,
+      imageHeight: 941,
+      imageAlt: "Buyers Recourse store operations dashboard showing department sales, orders, inventory alerts, and store tasks",
+      logo: "Assets/projects/buyersrecourse/buyersrecourse-logo.png",
+      logoWidth: 2172,
+      logoHeight: 724,
+      logoAlt: "Buyers Recourse",
+      capabilities: ["Department sales", "Order tracking", "Inventory alerts", "Operational tasks", "Store overview"]
+    },
+    loft: {
+      name: "The Loft",
+      kicker: "Warehouse Inventory",
+      description: "Know what you have, where it is, and what needs attention without digging through spreadsheets.",
+      image: "Assets/projects/loft/loft-home.png",
+      imageWidth: 1671,
+      imageHeight: 941,
+      imageAlt: "The Loft inventory management system showing SKUs, locations, receiving, transfers, and stock adjustments",
+      logo: "Assets/projects/loft/loft.png",
+      logoWidth: 1536,
+      logoHeight: 1024,
+      logoAlt: "The Loft",
+      capabilities: ["Inventory visibility", "Item and SKU tracking", "Storage locations", "Receiving and transfers", "Stock adjustments"]
+    },
+    bsb: {
+      name: "Blue Springs Bowl",
+      kicker: "Training & Onboarding",
+      description: "Give employees a consistent place to learn procedures, follow lessons, and build confidence in daily operations.",
+      image: "Assets/projects/bsb/bsb-home.png",
+      imageWidth: 1670,
+      imageHeight: 942,
+      imageAlt: "Blue Springs Bowl training and onboarding interface with video instruction, learning materials, chapters, quizzes, and progress",
+      logo: "Assets/projects/bsb/BSBowl.png",
+      logoWidth: 690,
+      logoHeight: 917,
+      logoAlt: "Blue Springs Bowl",
+      capabilities: ["Training lessons", "Video instruction", "Learning materials", "Progress tracking", "Quizzes and readiness"]
+    }
+  };
+
+  const tabs = Array.from(showcase.querySelectorAll('[role="tab"]'));
+  const panel = document.getElementById("business-showcase-panel");
+  const image = document.getElementById("business-showcase-image");
+  const logo = document.getElementById("business-showcase-logo");
+  const name = document.getElementById("business-showcase-name");
+  const kicker = document.getElementById("business-showcase-kicker");
+  const description = document.getElementById("business-showcase-description");
+  const capabilities = document.getElementById("business-showcase-capabilities");
+  const expand = document.getElementById("business-showcase-expand");
+  const dialog = document.getElementById("business-showcase-dialog");
+  const dialogImage = document.getElementById("business-showcase-dialog-image");
+  const dialogTitle = document.getElementById("business-showcase-dialog-title");
+  const dialogClose = document.getElementById("business-showcase-dialog-close");
+  let activeKey = "i3";
+
+  function renderSolution(key, { track = true } = {}) {
+    const solution = solutions[key];
+    const selectedTab = tabs.find((tab) => tab.dataset.business === key);
+    if (!solution || !selectedTab || key === activeKey && track) return;
+
+    activeKey = key;
+    tabs.forEach((tab) => {
+      const selected = tab === selectedTab;
+      tab.setAttribute("aria-selected", String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+    });
+
+    panel.setAttribute("aria-labelledby", selectedTab.id);
+    panel.classList.remove("is-updating");
+    void panel.offsetWidth;
+
+    image.src = solution.image;
+    image.width = solution.imageWidth;
+    image.height = solution.imageHeight;
+    image.alt = solution.imageAlt;
+    logo.src = solution.logo;
+    logo.width = solution.logoWidth;
+    logo.height = solution.logoHeight;
+    logo.alt = solution.logoAlt;
+    name.textContent = solution.name;
+    kicker.textContent = solution.kicker;
+    description.textContent = solution.description;
+    capabilities.setAttribute("aria-label", `${solution.name} example capabilities`);
+    capabilities.replaceChildren(...solution.capabilities.map((item) => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      return li;
+    }));
+    expand.setAttribute("aria-label", `Enlarge the ${solution.name} ${solution.kicker.toLowerCase()} example`);
+    panel.classList.add("is-updating");
+
+    if (track) {
+      window.arsoGa4?.sendEvent("business_showcase_selected", {
+        business_name: solution.name
+      });
+    }
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => renderSolution(tab.dataset.business));
+    tab.addEventListener("keydown", (event) => {
+      let nextIndex = null;
+      if (["ArrowRight", "ArrowDown"].includes(event.key)) nextIndex = (index + 1) % tabs.length;
+      if (["ArrowLeft", "ArrowUp"].includes(event.key)) nextIndex = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === "Home") nextIndex = 0;
+      if (event.key === "End") nextIndex = tabs.length - 1;
+      if (nextIndex === null) return;
+      event.preventDefault();
+      tabs[nextIndex].focus();
+      renderSolution(tabs[nextIndex].dataset.business);
+    });
+  });
+
+  expand.addEventListener("click", () => {
+    const solution = solutions[activeKey];
+    dialogImage.src = solution.image;
+    dialogImage.width = solution.imageWidth;
+    dialogImage.height = solution.imageHeight;
+    dialogImage.alt = `${solution.imageAlt} shown at a larger size`;
+    dialogTitle.textContent = `${solution.name} — ${solution.kicker}`;
+    if (typeof dialog.showModal === "function") dialog.showModal();
+  });
+
+  dialogClose.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && dialog.open) {
+      event.preventDefault();
+      dialog.close();
+    }
+  });
+  dialog.addEventListener("close", () => expand.focus());
+
+  renderSolution(activeKey, { track: false });
+})();
+</script>
+<script>
+(() => {
+  const expand = document.getElementById("occuboard-expand");
+  const dialog = document.getElementById("occuboard-dialog");
+  const close = document.getElementById("occuboard-dialog-close");
+  if (!expand || !dialog || !close) return;
+
+  expand.addEventListener("click", () => {
+    if (typeof dialog.showModal === "function") dialog.showModal();
+  });
+  close.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("close", () => expand.focus());
+})();
+</script>
+<script>
+(() => {
+  const views = {
+    scoring: {
+      src: "Assets/projects/recap/recap-scoring.png",
+      width: 1273,
+      height: 991,
+      label: "scoring workspace",
+      alt: "RECAP tournament scoring workspace showing score entry, saved totals, and a live leaderboard"
+    },
+    standings: {
+      src: "Assets/projects/recap/recap-scrolling.png",
+      width: 1918,
+      height: 1123,
+      label: "live standings",
+      alt: "RECAP live tournament standings display showing bowler rankings and game totals"
+    }
+  };
+  const image = document.getElementById("recap-showcase-image");
+  const switcher = document.querySelector(".recap-view-switcher");
+  const expand = document.getElementById("recap-expand");
+  const dialog = document.getElementById("recap-dialog");
+  const dialogImage = document.getElementById("recap-dialog-image");
+  const dialogTitle = document.getElementById("recap-dialog-title");
+  const close = document.getElementById("recap-dialog-close");
+  if (!image || !switcher || !expand || !dialog || !dialogImage || !dialogTitle || !close) return;
+
+  let activeView = "scoring";
+  const buttons = Array.from(switcher.querySelectorAll("[data-recap-view]"));
+
+  function selectView(key) {
+    const view = views[key];
+    if (!view) return;
+    activeView = key;
+    image.src = view.src;
+    image.width = view.width;
+    image.height = view.height;
+    image.alt = view.alt;
+    expand.setAttribute("aria-label", `Enlarge the RECAP ${view.label} screenshot`);
+    buttons.forEach((button) => {
+      const selected = button.dataset.recapView === key;
+      button.classList.toggle("is-active", selected);
+      button.setAttribute("aria-pressed", String(selected));
+    });
+  }
+
+  buttons.forEach((button) => button.addEventListener("click", () => selectView(button.dataset.recapView)));
+  expand.addEventListener("click", () => {
+    const view = views[activeView];
+    dialogImage.src = view.src;
+    dialogImage.width = view.width;
+    dialogImage.height = view.height;
+    dialogImage.alt = `${view.alt} at a larger size`;
+    dialogTitle.textContent = `RECAP ${view.label}`;
+    if (typeof dialog.showModal === "function") dialog.showModal();
+  });
+  close.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("close", () => expand.focus());
+})();
+</script>
+<script>
+(() => {
+  const expand = document.getElementById("phscan-expand");
+  const dialog = document.getElementById("phscan-dialog");
+  const close = document.getElementById("phscan-dialog-close");
+  if (!expand || !dialog || !close) return;
+
+  expand.addEventListener("click", () => {
+    if (typeof dialog.showModal === "function") dialog.showModal();
+  });
+  close.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("close", () => expand.focus());
+})();
+</script>
 <script src="arso-polish.js"></script>
 <script src="ga4-events.js"></script>
 </body>
