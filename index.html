@@ -78,7 +78,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20261119-polish" />
 	<link rel="icon" type="image/svg+xml" href="Assets/favicon.svg" />
 	<link rel="icon" type="image/svg+xml" sizes="32x32" href="Assets/favicon-32.svg">
 <link rel="icon" type="image/svg+xml" sizes="16x16" href="Assets/favicon-16.svg">
@@ -99,8 +99,8 @@
   <img src="/Assets/logo-compact1.svg" alt="AR" class="logo logo-compact" />
 </a>
 
-        <button class="home-nav-toggle" type="button" aria-expanded="false" aria-controls="home-primary-nav">
-          <span class="sr-only">Toggle navigation</span>
+        <button class="shared-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="home-primary-nav">
+          <span class="sr-only" aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -108,7 +108,7 @@
 
         <nav class="nav-links" id="home-primary-nav" aria-label="Primary navigation">
           <a href="services.html">Services</a>
-          <a href="projects.html">Projects</a>
+          <a href="projects.html">Products</a>
           <a href="about.html">About</a>
           <a href="#contact" class="btn btn-sm">Contact</a>
         </nav>
@@ -145,13 +145,7 @@
 
       <figure class="hero-visual-wrap">
         <div class="hero-image-frame">
-          <a
-            class="hero-image-link"
-            href="Assets/projects/i3/i3-home.png"
-            target="_blank"
-            rel="noopener"
-            aria-label="Open the Innovate Three sales performance dashboard at full size in a new tab"
-          >
+          <button id="hero-image-expand" type="button" class="hero-image-link" aria-label="Enlarge the Innovate Three sales performance dashboard">
             <img
               src="Assets/projects/i3/i3-home.png"
               alt="Innovate Three sales performance dashboard showing sales totals, leaderboard rankings, goal progress, pipeline, and recent activity"
@@ -159,8 +153,8 @@
               height="941"
               fetchpriority="high"
             >
-            <span class="hero-image-enlarge">View full size</span>
-          </a>
+            <span class="hero-image-enlarge">Expand</span>
+          </button>
         </div>
         <figcaption>Sales performance visibility designed around the way a team works.</figcaption>
       </figure>
@@ -307,41 +301,47 @@
     </div>
 
     <div class="homepage-system-preview-grid homepage-capability-grid" aria-label="ARSO services and capabilities">
-      <article>
+      <a class="homepage-service-card" href="services.html#custom-software">
         <div class="homepage-capability-icon"><i data-lucide="code-2"></i></div>
         <h3>Custom Software &amp; Product Development</h3>
-        <p>Turn an idea into working software. From early concepts and prototypes to customer-facing applications and products built to launch, sell, and grow.</p>
-      </article>
+        <p>From early concepts to customer-facing applications, we build practical software designed to launch, scale, and grow.</p>
+      </a>
 
-      <article>
+      <a class="homepage-service-card" href="services.html#web-design-development">
+        <div class="homepage-capability-icon"><i data-lucide="monitor-smartphone"></i></div>
+        <h3>Web Design &amp; Development</h3>
+        <p>Responsive business websites and branded online experiences built for usability, clear customer pathways, and practical functionality.</p>
+      </a>
+
+      <a class="homepage-service-card" href="services.html#business-systems">
         <div class="homepage-capability-icon"><i data-lucide="layout-dashboard"></i></div>
         <h3>CRM, Operations &amp; Reporting</h3>
         <p>Shared views for pipeline, tasks, ownership, leaderboards, KPIs, and follow-through.</p>
-      </article>
+      </a>
 
-      <article>
+      <a class="homepage-service-card" href="services.html#inventory-operations">
         <div class="homepage-capability-icon"><i data-lucide="boxes"></i></div>
         <h3>Inventory Operations</h3>
         <p>Practical visibility into stock levels, locations, vendors, and reorder needs.</p>
-      </article>
+      </a>
 
-      <article>
+      <a class="homepage-service-card" href="services.html#ai-automation">
         <div class="homepage-capability-icon"><i data-lucide="sparkles"></i></div>
         <h3>AI Workflow Assistants</h3>
         <p>Useful support for summaries, follow-ups, routing, reports, and reminders.</p>
-      </article>
+      </a>
 
-      <article>
+      <a class="homepage-service-card" href="services.html#training-enablement">
         <div class="homepage-capability-icon"><i data-lucide="graduation-cap"></i></div>
         <h3>Training &amp; Readiness</h3>
         <p>Role-based onboarding, SOP tracking, checklists, and readiness views.</p>
-      </article>
+      </a>
 
-      <article>
+      <a class="homepage-service-card" href="#contact">
         <div class="homepage-capability-icon"><i data-lucide="route"></i></div>
         <h3>Map My Process</h3>
         <p>A practical review of where work slows down, breaks, or depends on memory.</p>
-      </article>
+      </a>
     </div>
 
     <a class="services-overview-link" href="services.html">Explore all services <i data-lucide="arrow-right" aria-hidden="true"></i></a>
@@ -1544,13 +1544,13 @@
           <a href="services.html#ai-automation">Process Automation</a>
           <a href="ai-workflow-assistant.html">AI Tools</a>
           <a href="services.html#training-enablement">Team Enablement</a>
-          <a href="services.html#custom-software">Web Presence &amp; Intake</a>
+          <a href="services.html#web-design-development">Web Design &amp; Development</a>
         </nav>
 
         <nav class="footer-nav" aria-label="Footer company navigation">
           <h3>Company</h3>
           <a href="about.html">About</a>
-          <a href="projects.html">Projects</a>
+          <a href="projects.html">Products</a>
           <a href="case-studies.html">Case Studies</a>
           <a href="#how-we-work">How We Work</a>
           <a href="careers.html">Careers</a>
@@ -1574,40 +1574,12 @@
       </div>
     </footer>
 
+    <dialog id="hero-image-dialog" class="business-showcase-dialog product-showcase-dialog" aria-labelledby="hero-image-dialog-title">
+      <div class="business-showcase-dialog-card"><div class="business-showcase-dialog-head"><h2 id="hero-image-dialog-title">Innovate Three sales performance dashboard</h2><button type="button" data-home-lightbox-close aria-label="Close enlarged screenshot">&times;</button></div><img src="Assets/projects/i3/i3-home.png" alt="Innovate Three sales performance dashboard showing sales totals, leaderboard rankings, goal progress, pipeline, and recent activity" width="1671" height="941"></div>
+    </dialog>
     <script src="script.js"></script>
-	<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.querySelector(".home-nav-toggle");
-    const nav = document.getElementById("home-primary-nav");
-    if (!toggle || !nav) return;
-
-    const closeMenu = (restoreFocus = false) => {
-      nav.classList.remove("is-open");
-      toggle.setAttribute("aria-expanded", "false");
-      if (restoreFocus) toggle.focus();
-    };
-
-    toggle.addEventListener("click", () => {
-      const shouldOpen = toggle.getAttribute("aria-expanded") !== "true";
-      nav.classList.toggle("is-open", shouldOpen);
-      toggle.setAttribute("aria-expanded", String(shouldOpen));
-    });
-
-    nav.addEventListener("click", (event) => {
-      if (event.target.closest("a")) closeMenu();
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && nav.classList.contains("is-open")) {
-        closeMenu(true);
-      }
-    });
-
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 640) closeMenu();
-    });
-  });
-</script>
+    <script src="shared-nav.js?v=20261118-repair"></script>
+    <script src="homepage-lightbox.js?v=20261118-repair"></script>
 	<script>
   window.lucide?.createIcons();
 </script>
@@ -2115,12 +2087,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", () => {
     const revealPoint = window.innerWidth <= 640 ? 600 : 200;
-    if (window.scrollY > revealPoint) {
+    const scrollPosition = Math.max(window.scrollY, document.scrollingElement?.scrollTop || 0);
+    if (scrollPosition > revealPoint) {
       backToTop.classList.add("show");
     } else {
       backToTop.classList.remove("show");
     }
   });
+
+  document.addEventListener("scroll", () => {
+    const revealPoint = window.innerWidth <= 640 ? 600 : 200;
+    const scrollPosition = Math.max(window.scrollY, document.scrollingElement?.scrollTop || 0);
+    backToTop.classList.toggle("show", scrollPosition > revealPoint);
+  }, { passive: true });
 
   backToTop.addEventListener("click", () => {
     window.scrollTo({

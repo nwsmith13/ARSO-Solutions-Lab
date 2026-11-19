@@ -37,7 +37,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20261119-polish" />
     <link rel="icon" type="image/png" href="/Assets/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/Assets/favicon-32.svg" />
     <link rel="icon" type="image/png" sizes="16x16" href="/Assets/favicon-16.svg" />
@@ -58,9 +58,12 @@
           <img src="/Assets/logo-compact1.svg" alt="AR" class="logo logo-compact" />
         </a>
 
-        <nav class="nav-links">
+        <button class="shared-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="about-primary-nav">
+          <span class="sr-only" aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+        <nav class="nav-links" id="about-primary-nav" aria-label="Primary navigation">
           <a href="services.html">Services</a>
-          <a href="projects.html">Projects</a>
+          <a href="projects.html">Products</a>
           <a href="about.html" aria-current="page">About</a>
           <a href="index.html#contact" class="btn btn-sm">Contact</a>
         </nav>
@@ -210,7 +213,7 @@
         <nav class="footer-nav" aria-label="Footer company navigation">
           <h3>Company</h3>
           <a href="about.html" aria-current="page">About</a>
-          <a href="projects.html">Projects</a>
+          <a href="projects.html">Products</a>
           <a href="case-studies.html">Case Studies</a>
           <a href="index.html#how-we-work">How We Work</a>
           <a href="careers.html">Careers</a>
@@ -254,6 +257,8 @@
       window.addEventListener("scroll", updateHeaderLogo, { passive: true });
       updateHeaderLogo();
     </script>
+    <script src="shared-nav.js?v=20261118-repair"></script>
+    <script src="shared-controls.js?v=20261119-controls"></script>
     <script src="ga4-events.js"></script>
   </body>
 </html>

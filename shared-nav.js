@@ -15,6 +15,7 @@
     const shouldOpen = toggle.getAttribute("aria-expanded") !== "true";
     nav.classList.toggle("is-open", shouldOpen);
     toggle.setAttribute("aria-expanded", String(shouldOpen));
+    toggle.setAttribute("aria-label", shouldOpen ? "Close navigation" : "Open navigation");
   });
 
   nav.addEventListener("click", (event) => {
@@ -26,11 +27,13 @@
   });
 
   document.addEventListener("click", (event) => {
-    if (!nav.classList.contains("is-open") || event.target.closest(".site-header")) return;
+    if (!nav.classList.contains("is-open") || nav.contains(event.target) || toggle.contains(event.target)) return;
     closeMenu();
   });
 
   window.addEventListener("resize", () => {
     if (window.innerWidth > 640) closeMenu();
   });
+
+  toggle.setAttribute("aria-label", "Open navigation");
 })();
